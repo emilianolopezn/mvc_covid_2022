@@ -29,6 +29,16 @@ Route::get('/variantes/create',
 Route::post('/variantes/store',
             'VariantesCovidController@store')->
             name('variantes.store');
+Route::get('/variantes/{id}/edit',
+            'VariantesCovidController@edit')->
+            name('variantes.edit');
+Route::put('/variantes/{id}',
+            'VariantesCovidController@update')->
+            name('variantes.update');
+Route::delete('/variantes/{id}',
+            'VariantesCovidController@destroy')->
+            name('variantes.destroy');
+
 
 /*Route::get('/variantes', 
     [VariantesCovidController::class,'index']);*/
